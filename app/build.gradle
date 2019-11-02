@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'jacoco'
 
 repositories {
     google()
@@ -40,6 +41,7 @@ android {
         debug {
             applicationIdSuffix ".debug"
             manifestPlaceholders = [appName: "@string/app_name_debug"]
+            testCoverageEnabled true
         }
 
         release {
